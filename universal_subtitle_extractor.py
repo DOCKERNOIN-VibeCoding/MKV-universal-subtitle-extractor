@@ -1064,9 +1064,13 @@ class App(TkinterDnD.Tk if HAS_DND else tk.Tk):
             self.parser.parse_tracks_only()
             self.parser.parse_all()
 
-            output_dir = os.path.dirname(self.file_path)
             base_name = os.path.splitext(
                 os.path.basename(self.file_path))[0]
+            # 동영상 파일과 같은 위치에 '동영상명_subs' 폴더 생성
+            output_dir = os.path.join(
+                os.path.dirname(self.file_path),
+                f"{base_name}_subs")
+            os.makedirs(output_dir, exist_ok=True)
 
             # ★ 언어별 그룹핑
             lang_groups = {}
