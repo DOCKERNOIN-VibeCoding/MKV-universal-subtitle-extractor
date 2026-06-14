@@ -1,5 +1,5 @@
 """
-Universal Subtitle Extractor v3.2
+Universal Subtitle Extractor v3.3
 MKV / MP4 내장 자막을 원본 형식 그대로 추출하는 순수 Python GUI 프로그램
 외부 도구(FFmpeg, MKVToolNix) 불필요 - Python 3.9+
 
@@ -857,7 +857,7 @@ class ScrollableTrackList(tk.Frame):
 class App(TkinterDnD.Tk if HAS_DND else tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Universal Subtitle Extractor v3.2")
+        self.title("Universal Subtitle Extractor v3.3")
         self.geometry("700x640")
         self.resizable(False, False)
         self.configure(bg="#1e1e2e")
